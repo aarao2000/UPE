@@ -1,0 +1,194 @@
+
+
+-- Censo Discente
+SELECT DISTINCT
+    v.nm_cpf_pess cpf,
+    p.nm_pess nome,
+    TO_CHAR(p.dt_nasc,'DD/MM/YYYY') dt_nascimento,
+    v.nu_ano_admis
+    || '.'
+    || v.nu_semtr_admis periodo_ingresso,
+    ti.ds_tp_ingrs tipo_ingresso,
+    sa.cd_perd_letv periodo_letivo,
+    sc.nm_campus campus,
+    pf.nm_progr_form curso,
+    pf.nu_carga_horr_tot carga_horaria_curso,
+    t.nm_turno turno,
+    CASE
+            WHEN instr(nm_progr_form,'EAD') = 0 THEN 'PRESENCIAL'
+            WHEN (
+                instr(nm_progr_form,'EAD') > 0
+                OR instr(nm_progr_form,'PARFOR') > 0
+            ) THEN 'ENSINO A DISTANCIA'
+        END
+    modalidade,
+    CASE
+            WHEN v.cd_tipo_cota = 3 THEN 'L2' --'RENDA_MENOR_E_GRUPO'
+            WHEN v.cd_tipo_cota = 4 THEN 'L1' --'RENDA_MENOR'
+            WHEN v.cd_tipo_cota = 5 THEN 'L4' --'RENDA_MAIOR_E_GRUPO'
+            WHEN v.cd_tipo_cota = 6 THEN 'L3' --'RENDA_MAIOR'
+            WHEN v.cd_tipo_cota = 8 THEN 'OUTROS'
+            ELSE 'AC' -- 'NAO_REDE_PUBLICA'
+        END
+    cotas,
+    CASE
+            WHEN av.fl_rede_publ = 0 THEN 'NÃO'
+            WHEN av.fl_rede_publ = 1 THEN 'SIM'
+            ELSE 'NÃO INFORMADO'
+        END
+    escola_publica,
+    tsa.ds_tp_sit_acad,
+    nvl2( (
+        SELECT
+            MAX(m.cd_monitor)
+        FROM
+            siga_monitor m,siga_monitoria mon
+        WHERE
+            m.nu_matr_curso(+) = v.nu_matr_curso
+            AND m.cd_monit = mon.cd_monit(+)
+            AND mon.cd_perd_letv <= sa.cd_perd_letv
+    ),'SIM','NÃO') monit_proacad,
+    p.nm_sexo sexo,
+    CASE nm_cor_raca
+            WHEN '1'   THEN 'BRANCA'
+            WHEN '2'   THEN 'PRETA'
+            WHEN '3'   THEN 'PARDA'
+            WHEN '4'   THEN 'AMARELA'
+            WHEN '5'   THEN 'INDÍGENA'
+            WHEN '6'   THEN 'NÃO DISPÕE'
+            WHEN '7'   THEN 'NÃO DECLARADO'
+        END
+    cor,
+    p.nm_mae nome_mae,
+    p.nm_sigl_pais_nac nacionalidade,
+    cdn.nm_cidd cidade_nat,
+    cdn.nm_sigl_uf uf_nat,
+    nvl2(df.nm_cpf_pess,'SIM','NÃO') defic,
+    (
+        CASE
+            WHEN tdf.cd_tp_defcia = 2001 THEN 'SIM'
+            ELSE 'NÃO'
+        END
+    ) surdez,
+    (
+        CASE
+            WHEN tdf.cd_tp_defcia = 2008 THEN 'SIM'
+            ELSE 'NÃO'
+        END
+    ) auditiva,
+    (
+        CASE
+            WHEN tdf.cd_tp_defcia = 2009 THEN 'SIM'
+            ELSE 'NÃO'
+        END
+    ) fisica,
+    (
+        CASE
+            WHEN tdf.cd_tp_defcia = 2010 THEN 'SIM'
+            ELSE 'NÃO'
+        END
+    ) surdocegueira,
+    (
+        CASE
+            WHEN tdf.cd_tp_defcia = 2011 THEN 'SIM'
+            ELSE 'NÃO'
+        END
+    ) multipla,
+    (
+        CASE
+            WHEN tdf.cd_tp_defcia = 2012 THEN 'SIM'
+            ELSE 'NÃO'
+        END
+    ) intelectual,
+    (
+        CASE
+            WHEN tdf.cd_tp_defcia = 2013 THEN 'SIM'
+            ELSE 'NÃO'
+        END
+    ) autismo,
+    (
+        CASE
+            WHEN tdf.cd_tp_defcia = 2014 THEN 'SIM'
+            ELSE 'NÃO'
+        END
+    ) sindr_asperger,
+    (
+        CASE
+            WHEN tdf.cd_tp_defcia = 2015 THEN 'SIM'
+            ELSE 'NÃO'
+        END
+    ) sindr_rett,
+    (
+        CASE
+            WHEN tdf.cd_tp_defcia = 2016 THEN 'SIM'
+            ELSE 'NÃO'
+        END
+    ) transt_desint,
+    (
+        CASE
+            WHEN tdf.cd_tp_defcia = 2017 THEN 'SIM'
+            ELSE 'NÃO'
+        END
+    ) alt_hab_superd,
+    --
+    nvl2(me.nu_matr_curso,'SIM','NÃO') mob_acad,
+    nvl2(me.nm_sigl_pais, (
+        CASE
+            WHEN me.nm_sigl_pais = 'BRA' THEN 'NACIONAL'
+            ELSE 'INTERNACIONAL'
+        END
+    ),NULL) tipo_mob_acad,
+    me.nm_inst_ens_supr ies_dest,
+    NULL tipo_mob_acad_internac,
+    me.nm_pais pais_dest
+FROM
+    siga_pessoa p,
+    siga_vinculo v,
+    siga_programa_formacao pf,
+    siga_orgao so,
+    siga_campus sc,
+    siga_situacao_academica sa,
+    siga_tipo_situacao_academica tsa,
+    siga_aprovado_vest av,
+    siga_tipo_ingresso ti,
+    siga_cidade cdn,
+    siga_cidade cdr,
+    siga_turno_vinculo tv,
+    siga_turno t,
+    siga_deficiencia df,
+    siga_tipo_deficiencia tdf,
+    (
+        SELECT
+            me.nu_matr_curso,
+            ies.nm_sigl_pais,
+            ies.nm_inst_ens_supr,
+            pa.nm_pais
+        FROM
+            siga_mobilidade_estudantil me,
+            siga_instituicao_ens_superior ies,
+            siga_pais pa
+        WHERE
+            me.cd_inst_ens_supr = ies.cd_inst_ens_supr
+            AND ies.nm_sigl_pais = pa.nm_sigl_pais
+    ) me
+WHERE
+    p.nm_cpf_pess = v.nm_cpf_pess
+    AND v.cd_progr_form = pf.cd_progr_form
+    AND pf.cd_org = so.cd_org
+    AND so.cd_campus = sc.cd_campus
+    AND v.nu_matr_curso = sa.nu_matr_curso
+    AND sa.cd_tp_sit_acad = tsa.cd_tp_sit_acad
+    AND v.nu_matr_curso = av.nu_matr_curso (+)
+    AND v.cd_tp_ingrs = ti.cd_tp_ingrs
+    AND p.cd_cidd_nat = cdn.cd_cidd (+)
+    AND p.cd_cidd_end = cdr.cd_cidd (+)
+    AND v.nu_matr_curso = tv.nu_matr_curso
+    AND tv.cd_turno = t.cd_turno
+    AND p.nm_cpf_pess = df.nm_cpf_pess (+)
+    AND df.cd_tp_defcia = tdf.cd_tp_defcia (+)
+    AND v.nu_matr_curso = me.nu_matr_curso (+)
+    AND pf.cd_nivel = 1
+    --AND v.nu_semtr_admis = '2019.2'
+    AND sa.cd_perd_letv IN (
+        '2020.1','2020.2','2020.3'
+    )
