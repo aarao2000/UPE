@@ -1,0 +1,72 @@
+drop table PROF;
+drop table ALUNO;
+drop table TECNICO;
+   
+   create table prof(
+   cpf char(11) unique,
+   nome varchar(40) not NULL,
+   email varchar(30));
+  
+   create table aluno(
+   cpf char(11) UNIQUE,
+   nome varchar(40) not NULL,
+   email varchar(30));
+   
+  create table tecnico(
+   cpf char(11) UNIQUE,
+   nome varchar(40) not NULL,
+   email varchar(30));
+   
+-- lista de professores  
+INSERT INTO prof
+VALUES 
+('10000000000', 'prof 01', 'prof01@upe.br'),
+('20000000000', 'prof 02', 'prof02@upe.br'),
+('30000000000', 'prof 03', 'prof03@upe.br'),
+('40000000000', 'prof 04', 'prof04@upe.br'),
+('50000000000', 'prof 05', 'prof05@upe.br'),
+('60000000000', 'prof 06', 'prof06@upe.br'),
+('70000000000', 'prof 07', 'prof07@upe.br'),
+('80000000000', 'prof 08', 'prof08@upe.br'),
+('90000000000', 'prof 09', 'prof09@upe.br');
+
+-- lista de alunos, com 4 professores incluidos
+INSERT INTO aluno
+VALUES 
+('10000000000', 'aluno 01', 'aluno01@upe.br'),
+('20000000000', 'aluno 02', 'aluno02@upe.br'),
+('30000000000', 'aluno 03', 'aluno03@upe.br'),
+('40000000000', 'aluno 04', 'aluno04@upe.br'),
+('50000000001', 'aluno 05', 'aluno05@upe.br'),
+('60000000002', 'aluno 06', 'aluno06@upe.br'),
+('70000000003', 'aluno 07', 'aluno07@upe.br'),
+('80000000004', 'aluno 08', 'aluno08@upe.br'),
+('90000000005', 'aluno 09', 'aluno09@upe.br');
+
+-- lista de tecnicos, com 1 tecnico não duplicado, ou seja, 4 professores triplicados e 4 tecnicos duplicados.
+INSERT INTO tecnico
+VALUES 
+('10000000000', 'tecnico 01', 'tecnico01@upe.br'),
+('20000000000', 'tecnico 02', 'tecnico02@upe.br'),
+('30000000000', 'tecnico 03', 'tecnico03@upe.br'),
+('40000000000', 'tecnico 04', 'tecnico04@upe.br'),
+('50000000001', 'tecnico 05', 'tecnico05@upe.br'),
+('60000000002', 'tecnico 06', 'tecnico06@upe.br'),
+('70000000003', 'tecnico 07', 'tecnico07@upe.br'),
+('80000000004', 'tecnico 08', 'tecnico08@upe.br'),
+('99999999999', 'tecnico 09', 'tecnico09@upe.br');
+
+-- uniao dos 3 segmentos universitarios em uma VIEW
+CREATE VIEW v_eleitores AS 
+SELECT cpf, nome, email, 'P' AS grupo FROM prof
+UNION ALL
+SELECT cpf, nome, email, 'A' AS grupo FROM aluno
+UNION ALL
+SELECT cpf, nome, email, 'T' AS grupo FROM tecnico;
+
+-- lista de eleitores repetidos
+SELECT COUNT(cpf), cpf, nome, grupo 
+FROM v_eleitores 
+GROUP BY cpf
+HAVING COUNT(*) > 1
+ORDER BY 1 DESC;
