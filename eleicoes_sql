@@ -1,6 +1,5 @@
-drop table PROF;
-drop table ALUNO;
-drop table TECNICO;
+
+   create database eleicoes01;
    
    create table prof(
    cpf char(11) unique,
@@ -70,3 +69,9 @@ FROM v_eleitores
 GROUP BY cpf
 HAVING COUNT(*) > 1
 ORDER BY 1 DESC;
+
+
+-- verificacao de email NÃO institucional
+SELECT cpf, nome, email
+FROM mytable
+WHERE email NOT LIKE '%@upe.br%'
