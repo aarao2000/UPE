@@ -1,23 +1,26 @@
 
-   create database eleicoes01;
+   CREATE DATABASE eleicoes01;
    
-   create table prof(
-   cpf char(11) unique,
-   nome varchar(40) not NULL,
-   email varchar(30));
+   CREATE TABLE prof(
+   cpf   CHAR(11) NOT NULL,
+   email VARCHAR(30),
+   nome  VARCHAR(40) NOT NULL
+   );
   
-   create table aluno(
-   cpf char(11) UNIQUE,
-   nome varchar(40) not NULL,
-   email varchar(30));
-   
-  create table tecnico(
-   cpf char(11) UNIQUE,
-   nome varchar(40) not NULL,
-   email varchar(30));
+   CREATE TABLE aluno(
+   cpf   CHAR(11) NOT NULL,
+   email VARCHAR(30),
+   nome  VARCHAR(40) NOT NULL
+   );
+
+   CREATE TABLE tecnico(
+   cpf CHAR(11) NOT NULL,
+   email VARCHAR(30)
+   nome VARCHAR(40) NOT NULL
+   );
    
 -- lista de professores  
-INSERT INTO prof
+INSERT INTO prof (cpf,nome,email)
 VALUES 
 ('10000000000', 'prof 01', 'prof01@upe.br'),
 ('20000000000', 'prof 02', 'prof02@upe.br'),
@@ -30,7 +33,7 @@ VALUES
 ('90000000000', 'prof 09', 'prof09@upe.br');
 
 -- lista de alunos, com 4 professores incluidos
-INSERT INTO aluno
+INSERT INTO aluno (cpf,nome,email)
 VALUES 
 ('10000000000', 'aluno 01', 'aluno01@upe.br'),
 ('20000000000', 'aluno 02', 'aluno02@upe.br'),
@@ -43,7 +46,7 @@ VALUES
 ('90000000005', 'aluno 09', 'aluno09@upe.br');
 
 -- lista de tecnicos, com 1 tecnico não duplicado, ou seja, 4 professores triplicados e 4 tecnicos duplicados.
-INSERT INTO tecnico
+INSERT INTO tecnico (cpf,nome,email)
 VALUES 
 ('10000000000', 'tecnico 01', 'tecnico01@upe.br'),
 ('20000000000', 'tecnico 02', 'tecnico02@upe.br'),
