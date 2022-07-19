@@ -15,7 +15,7 @@
 
    CREATE TABLE tecnico(
    cpf CHAR(11) NOT NULL,
-   email VARCHAR(30)
+   email VARCHAR(30),
    nome VARCHAR(40) NOT NULL
    );
    
