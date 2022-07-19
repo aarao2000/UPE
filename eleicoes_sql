@@ -1,23 +1,23 @@
 
-   CREATE DATABASE eleicoes01;
+CREATE DATABASE eleicoes01;
    
-   CREATE TABLE prof(
-   cpf   CHAR(11) NOT NULL,
-   email VARCHAR(30),
-   nome  VARCHAR(40) NOT NULL
-   );
+CREATE TABLE prof(
+cpf   CHAR(11) NOT NULL,
+email VARCHAR(30),
+nome  VARCHAR(40) NOT NULL
+);
   
-   CREATE TABLE aluno(
-   cpf   CHAR(11) NOT NULL,
-   email VARCHAR(30),
-   nome  VARCHAR(40) NOT NULL
-   );
+CREATE TABLE aluno(
+cpf   CHAR(11) NOT NULL,
+email VARCHAR(30),
+nome  VARCHAR(40) NOT NULL
+);
 
-   CREATE TABLE tecnico(
-   cpf CHAR(11) NOT NULL,
-   email VARCHAR(30),
-   nome VARCHAR(40) NOT NULL
-   );
+CREATE TABLE tecnico(
+cpf CHAR(11) NOT NULL,
+email VARCHAR(30),
+nome VARCHAR(40) NOT NULL
+);
    
 -- lista de professores  
 INSERT INTO prof (cpf,nome,email)
