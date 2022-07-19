@@ -32,7 +32,7 @@ VALUES
 ('80000000000', 'prof 08', 'prof08@upe.br'),
 ('90000000000', 'prof 09', 'prof09@upe.br');
 
--- lista de alunos, com 4 professores incluidos
+-- lista de alunos, com 4 professores tambem alunos
 INSERT INTO aluno (cpf,nome,email)
 VALUES 
 ('10000000000', 'aluno 01', 'aluno01@upe.br'),
@@ -45,7 +45,7 @@ VALUES
 ('80000000004', 'aluno 08', 'aluno08@upe.br'),
 ('90000000005', 'aluno 09', 'aluno09@upe.br');
 
--- lista de tecnicos, com 1 tecnico não duplicado, ou seja, 4 professores triplicados e 4 tecnicos duplicados.
+-- lista de tecnicos, com apenas 1 tecnico não duplicado, ou seja, 4 professores triplicados e 4 tecnicos duplicados.
 INSERT INTO tecnico (cpf,nome,email)
 VALUES 
 ('10000000000', 'tecnico 01', 'tecnico01@upe.br'),
