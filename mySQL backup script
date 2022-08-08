@@ -1,0 +1,46 @@
+
+mysqldump --databases MYDATA 
+
+GRANT root permissao:   quando o usuario root nao tem permissao pra admin mySQL
+==>> GRANT ALL ON [DatabaseName].* TO 'root'@'127.0.0.1' IDENTIFIED BY '[PASSWORD]';
+
+script backup mySQL   https://pt.stackoverflow.com/questions/329266/dump-de-todos-os-bancos-para-um-usu%C3%A1rio-especifico
+
+=================== UNIX script pra backup todos os esquemas do banco de dados mySQL de um determinado servidor // executado como root 
+#!/bin/bash
+
+read -p "Input the desired MySQL user for backup: " USER
+export USER=${USER}
+
+if [ -z "${USER}" ];
+then
+exit
+fi
+
+read -p "Input specified user password: " PASSWORD
+export PASSWORD=${PASSWORD}
+
+if [ -z "${PASSWORD}" ];
+then
+exit
+fi
+
+export MYSQL_BACKUP_DIR="/backups/mysql"
+mkdir -p ${MYSQL_BACKUP_DIR}/`date +%Y/%m/%d`
+
+#rm "$MYSQL_BACKUP_DIR/*gz" > /dev/null 2>&1
+
+databases=`mysql -h 127.0.0.1 -P3306 -u $USER -p$PASSWORD -e "SHOW DATABASES;" | tr -d "| " | grep -v Database`
+
+for db in $databases; do
+    if [[ "$db" != "information_schema" ]] && [[ "$db" != "performance_schema" ]] && [[ "$db" != "mysql" ]] && [[ "$db" != _* ]] ; then
+        echo "Dumping database: $db"
+        mysqldump -h 127.0.0.1 -P3306 -u $USER -p$PASSWORD --databases $db > ${MYSQL_BACKUP_DIR}/`date +%Y/%m/%d`/$db-`date +%Y-%m-%d`.sql
+        gzip ${MYSQL_BACKUP_DIR}/`date +%Y/%m/%d`/$db-`date +%Y-%m-%d`.sql
+        tar -cvf ${MYSQL_BACKUP_DIR}/`date +%Y`.tar ${MYSQL_BACKUP_DIR}/`date +%Y`
+    fi
+done
+
+unset PASSWORD;
+unset USER;
+==================================
