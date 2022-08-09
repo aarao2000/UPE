@@ -1,5 +1,5 @@
 
-mysqldump --databases MYDATA 
+mysqldump --databases MYDBXXX > MYDBXXX.sql
 
 GRANT root permissao:   quando o usuario root nao tem permissao pra admin mySQL
 ==>> GRANT ALL ON [DatabaseName].* TO 'root'@'127.0.0.1' IDENTIFIED BY '[PASSWORD]';
