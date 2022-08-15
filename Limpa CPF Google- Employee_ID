@@ -26,4 +26,4 @@ WHERE Employee_ID like '%.%';
 select Employee_ID from google_csv where length(Employee_ID) > 11 order by Employee_ID
 
 -- BUSCA NOMES ENORMES
-select * from google_csv where length(First_Name) > 50 order by length(First_Name) 
+select * from google_csv where length(First_Name) > 35 order by length(First_Name) 
