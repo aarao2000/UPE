@@ -1,0 +1,40 @@
+-- recupera alunos de EaD ativos para as eleicoes (AGOSTO 2022) - SIGA - UFPE / Aroldo
+SELECT
+    DISTINCT
+    v.nm_cpf_pess CPF,
+    p.nm_pess NOME,
+    p.nm_email_princ email,
+    p.nm_email_secd email2,
+    v.nu_ano_admis || '.' || v.nu_semtr_admis PERIODO_INGRESSO,
+    sc.NM_CAMPUS CAMPUS,
+    pf.NM_PROGR_FORM CURSO,
+    sa.CD_PERD_LETV PERIODO_LETIVO,
+    CASE
+        WHEN INSTR( NM_PROGR_FORM, 'EAD' )= 0 THEN 'PRESENCIAL'
+        WHEN INSTR( NM_PROGR_FORM, 'EAD' ) > 0 THEN 'ENSINO A DISTANCIA'
+    END MODALIDADE,
+    tsa.DS_TP_SIT_ACAD SITUACAO_ACADEMICA
+FROM
+    siga_pessoa p,
+    siga_vinculo v,
+    siga_programa_formacao pf,
+    siga_orgao so,
+    siga_campus sc,
+    siga_situacao_academica sa,
+    siga_tipo_situacao_academica tsa
+WHERE p.nm_cpf_pess = v.nm_cpf_pess
+    AND v.cd_progr_form = pf.cd_progr_form
+    AND pf.cd_org = so.cd_org
+    AND so.cd_campus = sc.cd_campus
+    AND v.NU_MATR_CURSO = sa.NU_MATR_CURSO
+    AND sa.CD_TP_SIT_ACAD = tsa.CD_TP_SIT_ACAD
+    and pf.cd_nivel = 1
+    AND v.fl_vinc = 1
+    --AND sa.CD_PERD_LETV in ('2022.1')
+    AND sa.CD_PERD_LETV in ('2022.2')
+    AND sa.TS_SIT_ACAD = (SELECT max(ts_sit_acad) FROM SIGA_SITUACAO_ACADEMICA
+                        WHERE NU_MATR_CURSO = sa.NU_MATR_CURSO AND cd_perd_letv = sa.CD_PERD_LETV)
+    AND tsa.cd_tp_sit_acad IN (1,2,3,18,20) -- SITUAÇÕES DE VÍNCULO
+    --AND NM_PROGR_FORM NOT LIKE '%EAD%'
+    AND NM_PROGR_FORM LIKE '%EAD%'
+ORDER BY NOME, PERIODO_LETIVO, CAMPUS, CURSO;
