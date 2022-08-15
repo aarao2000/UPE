@@ -1,0 +1,29 @@
+
+select *
+from google_csv g, siga_csv s
+where UPPER(s.nome) like UPPER(g.First_Name||' '||g.Last_Name)
+
+
+select s.NOME, s.CPF, g.Email
+from google_csv g, siga_csv s
+where s.CPF = g.CPF
+
+
+
+select s.NOME, g.First_Name, g.Last_Name, s.CPF, g.Employee_ID , g.Email, g.Last_Sign_In 
+from google_csv g, siga_csv s
+where s.CPF = g.Employee_ID
+and s.EMAIL = ''
+
+
+select * from google_csv where Employee_ID like '%.%'
+
+
+UPDATE google_csv 
+SET Employee_ID = REPLACE(Employee_ID,'.','')
+WHERE Employee_ID like '%.%';
+
+select Employee_ID from google_csv where length(Employee_ID) > 11 order by Employee_ID
+
+-- BUSCA NOMES ENORMES
+select * from google_csv where length(First_Name) > 50 order by length(First_Name) 
