@@ -1,0 +1,10 @@
+
+
+
+Relação de alunos que tem email do "Google" DIFERENTE do "SIGA" (190 casos observados)
+Observe que o sistema trata como equivalente minuscula e maiuscula (ou seja, não é "case sensitive")
+
+SQL:
+select s.NOME sNome, s.CPF sCPF, g.Email gEmail, s.email sEmail
+from google_csv g, siga_csv s
+where s.CPF = g.Employee_ID and s.Email <> g.Email;
