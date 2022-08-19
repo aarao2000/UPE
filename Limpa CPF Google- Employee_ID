@@ -36,3 +36,15 @@ select TRIM(UPPER(CONCAT (First_Name,' ', Last_Name)))  from google_csv where le
 select s.NOME, s.CPF, g.Email, s.email
 from google_csv g, siga_csv s
 where s.CPF = g.Employee_ID and s.Email like '';
+
+
+-- limpa CPF de espacos " " e pontos de interrogacao (?)
+UPDATE est_strict_icb
+SET CPF = REPLACE(CPF,'?','')
+WHERE CPF like '%?%';
+
+UPDATE est_strict_icb
+SET CPF = REPLACE(CPF,' ','')
+WHERE CPF like '% %';
+
+-------------
