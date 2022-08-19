@@ -79,3 +79,131 @@ ORDER BY CPF, COUNT(cpf) DESC;
 SELECT *
 FROM v_aluno_uniao
 where email <> ''
+
+
+============================================
+drop view  v_func_uniao;
+
+create view v_func_uniao as
+  select distinct cpf, email, nome, unidade, categoria 
+  from func_arcoverde 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from func_caruaru 
+       union all
+  select distinct cpf, email, nome, unidade, categoria 
+  from func_cisam 
+       union all
+  select distinct cpf, email, nome, unidade, categoria 
+  from func_esef 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from func_fcap
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from func_fcm 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from func_fensg
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from func_fop
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from func_garanhuns 
+       union all
+  select distinct cpf, email, nome, unidade, categoria 
+  from func_huoc 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from func_icb
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from func_matanorte
+       union all
+  select distinct cpf, email, nome, unidade, categoria 
+  from func_matasul 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from func_petrolina 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from func_poli
+       union all
+  select distinct cpf, email, nome, unidade, categoria 
+  from func_reitoria 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from func_salgueiro
+        union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from func_serratalhada;
+  
+==============================================================
+create view v_prof_uniao as
+  select distinct cpf, email, nome, unidade, categoria 
+  from prof_arcoverde 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from prof_caruaru 
+       union all
+   select distinct cpf, email, nome, unidade, categoria 
+  from prof_esef 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from prof_fcap
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from prof_fcm 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from prof_fensg
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from prof_fop
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from prof_garanhuns 
+       union all
+  select distinct cpf, email, nome, unidade, categoria 
+  from prof_huoc 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from prof_icb
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from prof_matanorte
+       union all
+  select distinct cpf, email, nome, unidade, categoria 
+  from prof_matasul 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from prof_petrolina 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from prof_poli
+       union all
+  select distinct cpf, email, nome, unidade, categoria 
+  from prof_reitoria 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from prof_salgueiro
+        union all
+  select  distinct cpf, email, nome, unidade, categoria 
+  from prof_serratalhada;
+  
+===================================== apenas os que possuem email funcional
+select 'TECNICO' as categoria, unidade, nome
+from v_func_uniao
+where email <> ''
+order by unidade, nome
+
+select 'ESTUDANTE' as categoria, unidade, nome
+from v_aluno_uniao
+where email <> ''
+order by unidade, nome
+
+select 'DOCENTE' as categoria, unidade, nome
+from v_prof_uniao
+where email <> ''
+order by unidade, nome
