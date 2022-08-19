@@ -1,0 +1,81 @@
+
+
+create view v_aluno_uniao as
+  select distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_lato_arcoverde 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_lato_caruaru 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_lato_fcap
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_lato_fcm 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_lato_fensg
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_lato_fop
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_lato_garanhuns 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_lato_icb
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_lato_matanorte
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_lato_petrolina 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_lato_poli
+            union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_strict_esef
+        union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_strict_fcap
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_strict_fcm 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_strict_fensg
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_strict_fop
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_strict_garanhuns 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_strict_icb
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_strict_matanorte
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_strict_petrolina 
+       union all
+  select  distinct cpf, email, nome, unidade, categoria,'ESTUD' as grupo
+  from est_strict_poli
+       union all
+  select  distinct cpf, email, nome, campus as unidade, curso as categoria, 'ESTUD' as grupo
+  from est_siga_grad
+       union all
+  select  distinct cpf, email, nome, campus as unidade, curso as categoria, 'ESTUD' as grupo
+  from est_siga_ead
+  
+  SELECT COUNT(cpf), cpf, email, nome, unidade, categoria
+FROM v_aluno_uniao
+GROUP BY cpf
+HAVING COUNT(*) > 1 and email <> ''
+ORDER BY CPF, COUNT(cpf) DESC;
+
+SELECT *
+FROM v_aluno_uniao
+where email <> ''
