@@ -207,3 +207,10 @@ select 'DOCENTE' as categoria, unidade, nome
 from v_prof_uniao
 where email <> ''
 order by unidade, nome
+
+======================
+  SELECT COUNT(cpf), cpf, email, nome, unidade, categoria
+FROM v_aluno_uniao
+GROUP BY cpf
+HAVING COUNT(*) > 1 and email <> ''
+ORDER BY CPF, COUNT(cpf) DESC;
