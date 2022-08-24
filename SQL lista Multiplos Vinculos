@@ -1,0 +1,12 @@
+
+SELECT veg.*
+FROM v_eleitores_g veg 
+INNER JOIN (
+SELECT cpf, COUNT(*) AS count
+FROM v_eleitores_g
+GROUP BY email
+HAVING COUNT(*) > 1
+) dup
+ON veg.cpf = dup.cpf
+order by 1
+;
