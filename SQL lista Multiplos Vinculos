@@ -4,9 +4,25 @@ FROM v_eleitores_g veg
 INNER JOIN (
 SELECT cpf, COUNT(*) AS count
 FROM v_eleitores_g
-GROUP BY email
-HAVING COUNT(*) > 1
+GROUP BY cpf
+HAVING count > 1
 ) dup
 ON veg.cpf = dup.cpf
 order by 1
 ;
+
+
+========= lista TODOS os multiplos vinculos usando tabela temporaria
+
+drop table t_mult_vinc;
+
+create temporary table t_mult_vinc as
+SELECT count(*), cpf, email, nome, unidade, grupo
+FROM v_eleitores_g
+GROUP BY cpf
+HAVING COUNT(*) > 1
+ORDER BY 1 DESC;
+
+select * from v_eleitores_g 
+where cpf in 
+(select cpf from t_mult_vinc);
