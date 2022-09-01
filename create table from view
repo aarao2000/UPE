@@ -1,0 +1,13 @@
+-- create tables from views (EST, FUNC, PROF)
+
+create table aa_ESTUDANTE_ALL_tfv as 
+       select * from v_aluno_uniao_final v
+       where upper(v.email) like '%UPE.BR%';
+
+create table aa_TEC_ALL_tfv as 
+       select * from v_func_uniao_final v
+       where upper(v.email) like '%UPE.BR%';
+       
+create table aa_PROF_ALL_tfv as 
+       select * from v_prof_uniao_final v
+       where upper(v.email) like '%UPE.BR%';
