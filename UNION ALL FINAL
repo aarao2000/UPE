@@ -1,0 +1,240 @@
+-- criacao das visoes EST, FUNC, PROF 
+
+create view v_aluno_uniao_final as
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_lato_arcoverde 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_lato_caruaru 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_lato_fcap
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_lato_fcm 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_lato_fensg
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_lato_fop
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_lato_garanhuns 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_lato_icb
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_lato_matanorte
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_lato_petrolina 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_lato_poli
+            union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_strict_esef
+        union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_strict_fcap
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_strict_fcm 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_strict_fensg
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_strict_fop
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_strict_garanhuns 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_strict_icb
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_strict_matanorte
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_strict_petrolina 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_strict_poli
+         union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_ead_fcap
+          union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_ead_garanhuns
+          union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_ead_matanorte
+          union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_ead_petrolina
+          union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_grad_arcoverde 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_grad_caruaru 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_grad_esef 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_grad_fcap
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_grad_fcm 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_grad_fensg
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_grad_fop
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_grad_garanhuns 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_grad_icb
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_grad_matanorte
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_grad_petrolina 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_grad_poli
+          union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_grad_salgueiro 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'EST' as grupo
+  from est_grad_serratalhada;
+
+
+
+
+create view v_func_uniao_final as
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_arcoverde 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_caruaru 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_cisam 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_esef 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_fcap
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_fcm 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_fensg
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_fop
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_garanhuns
+         union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_hr 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_huoc 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_icb
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_matanorte
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_matasul 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_petrolina 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_poli
+        union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_procape
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_reitoria 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_salgueiro
+        union all
+  select distinct cpf, email, nome, unidade, categoria, 'TEC' as grupo
+  from func_serratalhada;
+  
+
+ 
+ 
+ 
+ 
+create view v_prof_uniao_final as
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_arcoverde 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_caruaru 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_esef 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_fcap
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_fcm 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_fensg
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_fop
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_garanhuns 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_huoc 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_icb
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_matanorte
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_matasul 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_petrolina 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_poli
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_reitoria 
+       union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_salgueiro
+        union all
+  select distinct cpf, email, nome, unidade, categoria, 'PRO' as grupo
+  from prof_serratalhada;
