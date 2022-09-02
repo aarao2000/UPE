@@ -1,0 +1,21 @@
+-- criar tabelas tendo como base planilha da PRODEPE
+
+create table func_cisam01 as
+    select cpf, email, ' ' as nome_social, email_pessoal,unidade, cargo as categoria 
+    from teste_prodep_geral
+    where upper(unidade) like '%CISAM%' and upper(cargo) not like '%PROFESSOR%' and upper(email) like '%UPE.BR%';
+    
+create table func_hr01 as
+    select cpf, email, ' ' as nome_social, email_pessoal,unidade, cargo as categoria 
+    from teste_prodep_geral
+    where upper(unidade) like '%HR%' and upper(cargo) not like '%PROFESSOR%' and upper(email) like '%UPE.BR%';
+    
+create table func_huoc01 as
+    select cpf, email, ' ' as nome_social, email_pessoal,unidade, cargo as categoria 
+    from teste_prodep_geral
+    where upper(unidade) like '%HUOC%' and upper(cargo) not like '%PROFESSOR%' and upper(email) like '%UPE.BR%';
+    
+create table func_procape01 as
+    select cpf, email, ' ' as nome_social, email_pessoal,unidade, cargo as categoria  
+    from teste_prodep_geral
+    where upper(unidade) like '%PROCAPE%' and upper(cargo) not like '%PROFESSOR%' and upper(email) like '%UPE.BR%';
