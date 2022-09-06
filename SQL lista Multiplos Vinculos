@@ -1,3 +1,16 @@
+SELECT tab.*
+FROM est_alunos_all_2022set09 tab 
+INNER JOIN (
+SELECT cpf, COUNT(*) AS count
+FROM est_alunos_all_2022set09
+GROUP BY cpf
+HAVING count > 1
+) dup
+ON tab.cpf = dup.cpf
+order by 1
+;
+
+========================================
 
 SELECT veg.*
 FROM v_eleitores_g veg 
