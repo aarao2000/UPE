@@ -51,3 +51,4 @@ WHERE CPF like '% %';
 UPDATE est_alunos_all_2022set09 
 SET CPF = LTRIM(RTRIM(CPF))
 WHERE length(CPF) > 11;
+commit;
