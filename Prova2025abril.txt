@@ -1,10 +1,11 @@
-https://deepai.org/chat
+https://deepai.org/chat *
 https://chat.deepseek.com/
 https://www.whiterabbitneo.com/
 https://claude.ai/chat
-https://copilot.microsoft.com
+https://copilot.microsoft.com  *
 https://notebooklm.google.com/
 https://app.whiterabbitneo.com/chats/
+gemini.google.com  *
 
 No texto de Arruda, a crítica feminista é apresentada como um movimento intelectual e político que questiona estruturas de poder historicamente estabelecidas, mostra como o feminismo evoluiu através de diferentes “ondas", cada uma ampliando o escopo de análise e reivindicações, e não apenas identificando disparidades entre homens e mulheres, mas questionando fundamentalmente os sistemas de representação que naturalizam essas diferenças, possibilitando a desnaturalização de construções sociais que eram consideradas "fatos biológicos", revelando como características associadas a homens e mulheres são, na verdade, produtos culturais e históricos.
 Quanto à teoria de gênero, Arruda demonstra como esta surgiu como ferramental analítico dentro do movimento feminista para investigar como as diferenças entre masculino e feminino são construídas socialmente, e permite compreender que as desigualdades entre homens e mulheres não são determinadas pela biologia, mas por relações de poder historicamente constituídas.
