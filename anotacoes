@@ -11,7 +11,7 @@ C.00.
 
 http://sei.recife.pe.gov.br/sei/controlador.php?acao=procedimento_trabalhar&id_procedimento=2404372
 Auxilio Creche DEZ_2023
-sei.recife.pe.gov.br  loginEmprel  Co..0..
+sei.recife.pe.gov.br  log_Emprel  Co..0..
 
 IBM  u: a.2000 pw: c.00IBM.
 IBM learning: via google account
@@ -22,17 +22,17 @@ prod us_aarao 1.6
 postg turm*p*
 ===========
 EMP..Lmat 13749*
-redmine(Emp) login c.o
-http://redmine.recife.pe.gov.br/login
+redmine(Emp) log_ c.o
+http://redmine.recife.pe.gov.br/log_
 ============
-conectarecife (EMAC) pw: C.o0*
+conectarecife (EMAC) p: C.o0*
 conecta: C.00..
 ============
 https://prefrecife.sisponto.com.br:2083/spwrecife/
 matr / matr
 ============
 OTRS https://atendimento.zerohum.com.br/   ou     https://emprelatende.recife.pe.gov.br/otrs/
-login C.0.
+log_ C.0.
 
 Aarão Guimarães - 981136883
 Antonio Beethoven - 998013799
@@ -85,12 +85,12 @@ CEP: 52061-470 Rua Jerônimo de Albuquerque, 188, Apart.701, Ed. Atibaia Village
  http://localhost/phpmyadmin/index.php?route=/server/variables    => max_allowed_packet
  
  UFPB INGLES EaD
- login: a.2.0  p:c.o     matricula: 20220145058  Ingles ead UFPB
+ log_: a.2.0  p:c.o     matricula: 20220145058  Ingles ead UFPB
  https://sigaa.ufpb.br/sigaa/  
  https://sigaa.ufpb.br/sigaa/portais/discente/beta/discente.jsf
  
 https://www.uab.sead.ufpb.br/login/index.php
- moodle id:20220145058 p:c.00
+ moodle id: 20220145058 p:c.00
 
 letrasingles@sead.ufpb.br   (COORDENACAO DE CURSO)
 
@@ -100,8 +100,8 @@ Identidade Estudantil... c.o
 https://estudante.ciepe.com.br/inicio
 https://estudante.ciepe.com.br/
 
-senha COMPEC-IFPB: C.0.
-senha github : C.0..
+log_ COMPEC-IFPB: C.0.
+log_ github : C.0..
 https://game-decode.firebaseapp.com/dashboard
 Aarao Guimaraes : senha "c.o"                 
 
@@ -110,7 +110,7 @@ Deloitte   JobConvo Huddle      a.2.0@gmail.com   C.0.
 https://www.howtoanalyzedata.net/
 
 Matrícula: 202212302303    https://sigaa.ifsc.edu.br/sigaa/verTelaLogin.do
-login: aarao.al    C.00
+log_: aarao.al    C.00
 aarao.al@aluno.ifsc.edu.br
 =====================
 .gov.br  C.00.
@@ -123,20 +123,19 @@ matricula 2724987  SDS-PE             c.00
 matricula UPE 166103
 =================
 
-VIOLAO: aarao2000@gmail.com  andre99
+VIOLAO: a.2.0@gmail.com  andre99
 
 http://popcorntime-online.io/
 https://getpopcorntime.is/alpha.html
 KV1: alma de ferro (tanque de guerra)
 Saving Flora (elefante)
 
-Welcome to MYuventexStudio.com. To log in to your account, please click on Sign In at the top right corner of MYuventexStudio.com. Then enter your email and password.
-
-When prompted, please use the following credentials to login:
+Welcome to MYuventexStudio.com.
+When prompted, please use the following credentials to log_:
 
 https://myuventexstudio.com/en-US/studios     curriculum
 Username: a.2.0@g.com
-Password: c.00
+P:c.00
 
 ==============
 
@@ -149,7 +148,7 @@ PANDEIRO SETEMBRO: https://pandeiroonline.aprendendopercussao.com.br/semanadopan
 ========================
 
 GOOGLE CLASSROOM + GOOGLE MEET
-TIAGO	ARRUDA GUIMARÃES	tag@colegiosagradafamilia.com.br	SENHA	aluno@2020 / c.00
+TIAGO	ARRUDA GUIMARÃES	tag@colegiosagradafamilia.com.br	aluno@2020 / c.00
 
 =======================
 tiagoarrudaguimaraes@gmail.com c.00
@@ -231,7 +230,7 @@ https://www.openprocessing.org/sketch/862450     =>> cria media pra projetar.
 
 SORAIA UAB PT
 https://cas2.uab.pt/cas/login?service=https%3A%2F%2Fintranet.uab.pt%2F
-matr.: 1901535
+mat.: 1901535
  !d0nbNU?
 
 https://imagem.caixa.gov.br/asc/suporte.htm   Opcao 9
@@ -351,7 +350,7 @@ FAST SHOP   c.o
 Domingo,  3 Nov, 22hs, sem internet vivo
 Segunda, 11 nov, 17hs, sem internet vivo  PROT. 111120193696071  111120193714146
 
-site Estrela10   usuario: (83) 9 8600-2899  senha:c.o
+site Estrela10   usu: (83) 9 8600-2899  p:c.o
 
 cavaleiro das trevas 2013   knight of the dead
 
@@ -552,8 +551,6 @@ Candidato(a) AARAO AATA LEAL GUIMARAES,
 
 Opção: 0202 - Analista Judiciário - Área Judiciária - Especialidade Oficial de Justiça Avaliador Federal - Seção Judiciária - Pernambuco
 
-Os seus dados foram cadastrados com sucesso em nosso Banco de Dados. Para confirmar a sua Inscrição de número de pedido 22742459, você deve efetuar o pagamento escolhendo uma das opções abaixo.
-
 Candidato(a) AARAO AATA LEAL GUIMARAES, 
 
 Opção: 0902 - Técnico Judiciário - Área Administrativa - Especialidade Segurança e Transporte - Seção Judiciária - Pernambuco
@@ -563,7 +560,6 @@ Candidato(a): Aarao Aata Leal Guimaraes
 CPF: 507.273.464-15
 Número de Inscrição: 158273
 Opção: RMR (REGIÃO METROPOLITANA DO RECIFE) - ANALISTA TÉCNICO EM GESTÃO UNIVERSITÁRIA - ANALISTA DE SISTEMAS/ ÁREA: BANCO DE DADOS
-Pagamento da Inscrição: PAGAMENTO CONFIRMADO 
 
 FUNAPE: 
 Opção: ANALISTA EM GESTÃO PREVIDENCIÁRIA
@@ -571,12 +567,10 @@ CPF: 50727346415
 Nº Inscrição: 0009191b
 Código de Acesso: 6df49sbb
 
-LIVELO  senha 13.6
+LIVELO  p:13.6
 
 Télédéclaration des loyers:  https://www.qlweb-caf.fr (a.@gmail.com ?) 
-utilizateur 061 01717290001  // mot de passe // 05012012
-
-Ce mot de passe est valable uniquement jusqu'au 31 mars 2019.
+utilizateur 061 01717290001  // mot de p // 05012012
 
 DECEMBRE 2013
 
@@ -623,7 +617,7 @@ argemirosantino@yahoo.com.br
 CPF Tiago Arruda Guimaraes: 712.865.124-17   RG. 10847925 (13/06/2018)
 CPF Andre Arruda Guimaraes: 135.930.964-04   RG. 10847897 (13/06/2018)    escola Aplicacao_UPE: c.00
 
-============== CESPE CEBRASPE   pswd: C.00  (C maiusculo)
+============== CESPE CEBRASPE   p:C.00  (C maiusculo)
 ============== FCC           c.o
 
 ==============
@@ -631,10 +625,6 @@ Número de inscrição: 77031638-7
 Nome: Aarao Aata Leal Guimaraes
 CPF: 507.273.464-15
 Curso: 201 - TÉCNICO DO MINISTÉRIO PÚBLICO ESTADUAL - ÁREA ADMINISTRATIVA(MANHÃ) (NATAL)
-
-Local de Prova: UFRN - SETOR I - Bloco A
-Endereço: CAMPUS UNIVERSITÁRIO, S/N, LAGOA NOVA, Natal
-Turma: 1
 ++++++++++++++++++++++++++++
 
 admin admin
@@ -651,7 +641,7 @@ bb visa 4984013037681710
 
 alelo 5067620397354014
 
-www.previ.com.br   senha: 33..36
+www.previ.com.br   p:33..36
 
 http://www.samsungstore.com.br/previ  c.00
 
@@ -740,14 +730,14 @@ pascalsire@orange.fr
 
 postaldoservidorpe  m.2724987   co.go00
 
-aeroporto de lisboa:   aarao2000@hotmail.com   co.go
+aeroporto de lisboa:   aarao2000@hotmail.com   c.o
 http://vair-nhm.nomosphere.fr/app.php/login
 
 https://pje.tjpb.jus.br/pje/Processo/ConsultaDocumento/listView.seam
 15072308185229500000001673721
 15073115082486800000001724589
 
-CAGEPA    Inscricao: 018.37.120.0277  matricula: 11429615
+CAGEPA    Inscricao: 018.37.120.0277  mat: 11429615
 
 Trilheiros do Agreste: 996170260
 
@@ -867,8 +857,7 @@ The user's Homeserver is:	 D12ML702/12/M/IBM
 Mail Directory is:	mail10
 Mailfile is:	FR068350.NSF
 The ID's filename is	FR068350.ID
-
-password: x92ne72q
+p:x92ne72q
 
 Lotus Notes: F068350  c.00  
 
@@ -907,7 +896,7 @@ Soraia Souto Arruda - Ref. MB 201380474 - Prop de Mestr - Internac - 2º sem. 3�
 Soraia Souto Arruda - Ref. MB 241081829 - Prop de Mestr - Internac - 2º sem. 4ª Prest.  EUR 187,5
 ========================
 
-labanquepostale  1653157322 (tel. 3639 => passwd 33..36)    (0586) 
+labanquepostale  1653157322 (tel. 3639 => p:33..36)    (0586) 
 
 Mlle Safia Kharmoud   tel.04 89 03 21 98 Ste Helene
 0492173483 Perine Tetard
@@ -1043,7 +1032,7 @@ Processo nº 0053921-68.2012.4.01.3400
 
 =================================================
 Numero SMILES 765462283 
-Senha SMILES 
+p: SMILES 
 
 %SystemRoot%\system32\mstsc.exe   Remote Desktop
 ================ PARABOLICA ============
@@ -1132,7 +1121,7 @@ N° dossier: 071106200103
 senha:      AN4U8FPX
 
 CAF Num. 1397000  (caisse d'allocation familiale)
-senha 0881
+p 0881
 
 =========================
 http://www.auto-bleue.org    p 3694
@@ -1200,14 +1189,14 @@ Janaina et Tierry   06 87 74 47 54 / 06 62 19 60 77 ou 09 53 04 09 63  // celula
 
 0626934517  FERNANDA GUIMA
 
-========== moncompteformation.gouv.fr     N°  1650499416099 // Co.go000 (C maisculo)
+========== moncompteformation.gouv.fr     N°  1650499416099 // C.000 (C maisculo)
 
-========== www.ameli.fr - Securite Social N°  1650499416099 // 33223694
+========== www.ameli.fr - Securite Social N°  1650499416099 // 33..94
 
-Pole emploi = aarao2000 co.go00 /// dossier:5388791G  senha:672341    http://www.pole-emploi.fr/
+Pole emploi = aarao2000 c.00 /// dossier:5388791G  p:672341    http://www.pole-emploi.fr/
 Métier du ROME M1801 - Administrateur / Administratrice de bases de données
 
-========== https://www.mutibm.fr/espace-membre mutuelle IBM  065287B  c.go
+========== https://www.mutibm.fr/espace-membre mutuelle IBM  065287B  c.o
 06 set ange
 
 0493867527
@@ -1227,12 +1216,12 @@ Identifiant : 0493138963
 
 ======== FREEBOX ============  Sur votre ligne NDI11265757 est bien enregistrée. 
 
-freebox: 0493138963   c.go
+freebox: 0493138963   c.o
 
 novo freebox: 0493358551   xequaeka
 
 Novo Novo freebox: 0493839020
-Mot de passe : co.go00       ==>  so.0
+p:c.00       ==>  so.0
 
 accesso a distancia:  http://88.183.62.90:7208/      porta 7208
 
@@ -1252,7 +1241,7 @@ https://subscribe.free.fr/login/    fbx17508109     eithaigh
 
 =========== www.mobile.free.fr       suporte free mobile  3244 => opcao  1
 Identifiant :  10767986
-Mot de passe : 5q11esyp//c.00
+p: 5q11esyp//c.00
 
 tel.mob. FREEMOBILE: 0651000898
 
@@ -1265,17 +1254,17 @@ tel. freebox: 0952779907
 
 recreans@-mundandas-replebaris8  (nao internet)
 
-internet externa: 4778489073  SENHA: aarao    (wifi.free.fr)
+internet externa: 4778489073  p: aarao    (wifi.free.fr)
 
 =========== www.mobile.free.fr       suporte free mobile  3244 => opcao  1
 Identifiant :  10767986
-Mot de passe : 5q11esyp//c.00
+p : 5q11esyp//c.00
 
 tel.mob. FREEMOBILE: 0651000898
 
 L'envoi du SMS se fait en appelant le lien suivant : https://smsapi.free-mobile.fr/sendmsg
 avec les paramètres suivants :
-user :  votre login
+user :  votre log_
 pass :  votre clé d'identification générée automatiquement par notre service
 msg :  le contenu du SMS encodé sous forme d'url (Percent-encoding)
 Exemple : Envoyer le message "Hello World !" sur votre mobile :
@@ -1302,7 +1291,7 @@ email SIM UNLOCK: 3307569818336566
 
 ALCATEL
 
-tel. 0648923928 => passwd C55YJ7
+tel. 0648923928 => p C55YJ7
 
 EMEI 356077041736123
 
@@ -1311,14 +1300,14 @@ email SIM UNLOCK => Votre code est 1465052545
 
 NOVO ALCATEL
 
-tel. 0647986688    password   HPZ345
+tel. 0647986688    p  HPZ345
 
 emei 356077044529376  SUN:010 05
 
 =========================
 Nokia
 
-paswd: 925ESF
+p: 925ESF
 tel. 0788521734  valide jusqua 15-06-2013
 
 353696059863637
@@ -1331,18 +1320,18 @@ N° de commande	N° du magasin	Date
 LG T385 Wifi
 
 n°: 0786272304
-senha internet:  626GTZ
+p internet:  626GTZ
 
 IMEI: 353626053157447
 
 Votre code est : 6328329373008405
 ==========================
 N° 0786272261
-senha internet: R6UM77
+p internet: R6UM77
 
 IMEI: 353626053160128
 
-Votre code est : 8503794384535786
+p : 8503794384535786
 
 marcelakbg@hotmail.com   => tel. loja  83  33422063
 
@@ -1556,7 +1545,7 @@ securite sociale 1650499416099 07
 ---------
 Mes données de connexion à mon DMP : Dossie Medicale Partagé / Carte Vitale
 Identifiant de connexion zuer3009
-Mot de passe initial     C.00
+p initial     C.00
 ======= 
 33331812  FATIMA DE TIA JULIA
 BRUNO   06 80 94 31 58      brunoadias14@gmail.com
@@ -1696,7 +1685,7 @@ Reservas e Tarifas
 
 Telefone:   0300 210 60 60 - See more at: http://www.tapportugal.com/Info/pt/outros/contacte-nos#sthash.LX0bmHNd.dpuf
 
-=== TAP VICTORIA: TP 361642024      3694
+=== TAP VICTORIA: TP 361642024      3..4
 
 Contact Center
 (+351) 707 205 700
@@ -1731,7 +1720,7 @@ https://certpessoas.fgv.br/unibb.
 
 https://certpessoas.fgv.br/Unibb/Agendamento/AgendamentoCadastro.aspx
 
-===== 091225337   matricula UEPB   c.go
+===== 091225337   matricula UEPB   c.o
 
 ===  LUANA & FELIPE BARROS  casa 012 3522 8202
 
@@ -1746,7 +1735,7 @@ Telefone e Whatsapp: (81) 99591-9003 / (81) 99746-3587
 ==================
 Adriano (Estrategia Concurso)
 usuario: adriano.bezerra7@gmail.com
-senha: amarelo123
+p: amarelo123
 
 ===================
 Romildo Azevedo (Ceramica) Formiga Preta, PARELHAS-RN  84 98708170  // Peba 99524592
@@ -1794,7 +1783,7 @@ roteiro de hermeneutica, Ed. Jurua, autor: Alberto Marx
 WESLEY UEPB direito    8719 5831
 
 MEGA.co.nz    master key:   yNfnmbIxXQgKX9-lJdD6eA
-aarao2000@gmail.com  senha00
+aarao2000@gmail.com  c.00
 
 Salvador - O Martírio de um Povo / Filme completo aqui.   https://youtu.be/L_TmGAjhOxM
 Romero / Filme completo aqui. https://youtu.be/R0PSVqxtQm8
@@ -1816,7 +1805,7 @@ Rua Francisco Roberto, 84  centenario, 58428-203
 Irene Valentim dos Santos
 
 Adrianomicroaudiovideo@gmail.com
-Freewifi  477848-9073     senha:a..o
+Freewifi  477848-9073     p:a..o
 Cef 0836. 1045-0   
 Poup 0836  2099-8
 038.576.364-67 cpf
@@ -1845,7 +1834,7 @@ Ana Carolina BB 3331-6  poup 60261-2
 =====================================
 Matrícula: 202212302303
 https://sigaa.ifsc.edu.br/sigaa/verTelaLogin.do
-login: aarao.al C.00
+log_: aarao.al C.00
 aarao.al@aluno.ifsc.edu.br
 =============
 https://www.sympla.com.br/meus-pedidos  C.00#
